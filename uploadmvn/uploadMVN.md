@@ -262,6 +262,8 @@
       将发布工件部署到登台存储库https://oss.sonatype.org/service/local/staging/deploy/maven2
       将分阶段的工件释放到存储库“发布”中
       推广您的第一个发行版时，请对此票发表评论，谢谢
+    4.发布成功，但是无法下载问题：
+        检查pom.xml中是否有报错，修改后重新导入
     
     
     
