@@ -230,8 +230,13 @@
     在原来的Issue下添加评论：
         The component has been successfully released，please confirm
        
-### 8.0 
+### 8.0 问题：
     
+    1.无效的POM：/com/github/a982338665/lf-execl-easy/1.0.0-RELEASE/lf-execl-easy-1.0.0-RELEASE.pom：项目URL丢失 
+        添加url
+    2.没有公钥：ID为（6a08a45bdf4c5202）的密钥无法位于<a href="http://keyserver.ubuntu.com:11371/"> http://keyserver.ubuntu.com:11371/ < / a>。上载您的公钥，然后重试该操作。
+        gpg --keyserver hkp://keyserver.ubuntu.com:11371 --send-keys 29851CD296284B502C608DE06A08A45BDF4C5202
+        gpg --keyserver hkp://keyserver.ubuntu.com:11371 --recv-keys 29851CD296284B502C608DE06A08A45BDF4C5202
     
     
     
