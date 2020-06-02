@@ -124,7 +124,7 @@ excel的简易使用
                 testUser.setDeptName("部门+" + i);
                 testDept.add(testUser);
             }
-    
+     
             //导出全部
             ExportDataBase all1 = new ExportDataALL("sheet1", testUsers, TestUser.class);
             ExportDataBase all2 = new ExportDataALL("sheet2", testUsers, TestUser.class);

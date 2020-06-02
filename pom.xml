@@ -37,5 +37,33 @@
         </plugins>
     </build>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!--    需要替换的内容-->
+    <scm>
+        <url>https://github.com/a982338665/lf-execl-easy</url>
+        <connection>https://github.com/a982338665/lf-execl-easy.git</connection>
+        <developerConnection>https://github.com/a982338665/lf-execl-easy</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>luofeng</name>
+            <email>982338665@qq.com</email>
+            <url>https://github.com/a982338665/lf-execl-easy</url>
+        </developer>
+    </developers>
+
 
 </project>
