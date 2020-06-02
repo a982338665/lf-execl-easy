@@ -225,6 +225,12 @@
     登陆：账号是我们注册的用户名和密码
     点击：左侧的“Staging Respositories（暂存仓库）”，然后在右上角输入groupId，就可以搜索
     
+### 7.0 提交工作人员审核：
+    
+    在原来的Issue下添加评论：
+        The component has been successfully released，please confirm
+       
+### 8.0 
     
     
     
