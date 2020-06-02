@@ -2,9 +2,9 @@ package com.github.lfexecleasy.util;
 
 /**
  * @author : Mr huangye
- * @URL : CSDN 皇夜_
- * @createTime : 2020/5/29 18:30
- * @Description :
+ * URL : CSDN 皇夜_
+ * createTime : 2020/5/29 18:30
+ * Description :
  */
 public class StringUtils {
 

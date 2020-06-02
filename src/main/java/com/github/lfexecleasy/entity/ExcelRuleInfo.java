@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 /**
  * @author : Mr huangye
- * @URL : CSDN 皇夜_
- * @createTime : 2020/5/29 17:25
- * @Description : excel的规则信息，有默认值也可以设置
+ * URL : CSDN 皇夜_
+ * createTime : 2020/5/29 17:25
+ * Description : excel的规则信息，有默认值也可以设置
  */
 public class ExcelRuleInfo {
 

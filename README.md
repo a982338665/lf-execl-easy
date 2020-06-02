@@ -12,8 +12,8 @@ excel的简易使用
     
     /**
      * @author : Mr huangye
-     * @URL : CSDN 皇夜_
-     * @createTime : 2020/5/29 16:19
+     * URL : CSDN 皇夜_
+     * createTime : 2020/5/29 16:19
      */
     public class TestDept {
     
@@ -47,8 +47,8 @@ excel的简易使用
     
     /**
      * @author : Mr huangye
-     * @URL : CSDN 皇夜_
-     * @createTime : 2020/5/29 16:19
+     * URL : CSDN 皇夜_
+     * createTime : 2020/5/29 16:19
      */
     public class TestUser {
     

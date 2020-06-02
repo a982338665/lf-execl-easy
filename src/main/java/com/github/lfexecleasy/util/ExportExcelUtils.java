@@ -18,9 +18,9 @@ import java.util.regex.Pattern;
 
 /**
  * @author : Mr huangye
- * @URL : CSDN 皇夜_
- * @createTime : 2020/5/29 17:19
- * @Description : excel数据导出utl
+ * URL : CSDN 皇夜_
+ * createTime : 2020/5/29 17:19
+ * Description : excel数据导出utl
  */
 public class ExportExcelUtils {
 

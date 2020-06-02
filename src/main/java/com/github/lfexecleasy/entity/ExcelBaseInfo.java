@@ -5,9 +5,9 @@ import java.util.Map;
 
 /**
  * @author : Mr huangye
- * @URL : CSDN 皇夜_
- * @createTime : 2020/5/29 16:39
- * @Description : excel的基本信息数据
+ * URL : CSDN 皇夜_
+ * createTime : 2020/5/29 16:39
+ * Description : excel的基本信息数据
  */
 public class ExcelBaseInfo {
 

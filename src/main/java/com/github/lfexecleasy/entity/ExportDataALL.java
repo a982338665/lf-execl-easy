@@ -4,9 +4,9 @@ import java.util.List;
 
 /**
  * @author : Mr huangye
- * @URL : CSDN 皇夜_
- * @createTime : 2020/5/29 16:00
- * @Description : 导出数据参数封装： 全部导出
+ * URL : CSDN 皇夜_
+ * createTime : 2020/5/29 16:00
+ * Description : 导出数据参数封装： 全部导出
  */
 public class ExportDataALL extends ExportDataBase {
 
