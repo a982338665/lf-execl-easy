@@ -1,13 +1,14 @@
 
 ### 常用地址：
->官网地址：https://issues.sonatype.org
->GPG环境下载地址：https://www.gnupg.org/download/
->查看上传的代码：https://oss.sonatype.org/#stagingRepositories
->参考地址：https://www.jianshu.com/p/354f66ed4f89
->查看发布成果：https://search.maven.org/
->查看发布成果：https://mvnrepository.com
->将快照工件部署到存储库：https://oss.sonatype.org/content/repositories/snapshots
->将发布工件部署到登台存储库：https://oss.sonatype.org/service/local/staging/deploy/maven2
+
+> 官网地址：https://issues.sonatype.org  
+> GPG环境下载地址：https://www.gnupg.org/download/  
+> 查看上传的代码：https://oss.sonatype.org/#stagingRepositories  
+> 参考地址：https://www.jianshu.com/p/354f66ed4f89  
+> 查看发布成果：https://search.maven.org/  
+> 查看发布成果：https://mvnrepository.com  
+> 将快照工件部署到存储库：https://oss.sonatype.org/content/repositories/snapshots  
+> 将发布工件部署到登台存储库：https://oss.sonatype.org/service/local/staging/deploy/maven2  
 
 ### 1.0 注册并且创建工单：
     
