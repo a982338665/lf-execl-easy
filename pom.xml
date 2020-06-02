@@ -5,8 +5,10 @@
 
     <groupId>com.github.a982338665</groupId>
     <artifactId>lf-execl-easy</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <!--注意限定版本一定为RELEASE,因为上传的对应仓库的存储类型为RELEASE-->
+    <version>1.0.0-RELEASE</version>
 
     <name>lf-execl-easy</name>
     <description>excel 简易使用</description>

@@ -2,7 +2,7 @@
 ### 常用地址：
 >官网地址：https://issues.sonatype.org
 >GPG环境下载地址：https://www.gnupg.org/download/
->GPG环境下载地址：https://www.gnupg.org/download/
+>查看上传的代码：https://oss.sonatype.org/#stagingRepositories
 >参考地址：https://www.jianshu.com/p/354f66ed4f89
 
 ### 1.0 注册并且创建工单：
@@ -24,22 +24,27 @@
 ### 3.0 配置项目下的pom.xml：配置代码发布器：
     
     <!-- pom.xml 中必须包括：name、description、url、licenses、developers、scm 等基本信息，使用了 Maven 的 profile 功能，
-    只有在 release 的时候才创建源码包、文档包、使用 GPG 进行数字签名。 -->
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     
-    <?xml version="1.0" encoding="UTF-8"?>
-    <project xmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <modelVersion>4.0.0</modelVersion>
     
-        <groupId>com.github.simonalong</groupId>
-        <artifactId>mikilin</artifactId>
+        <groupId>com.github.a982338665</groupId>
+        <artifactId>lf-execl-easy</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
         <packaging>jar</packaging>
-        <version>1.4.0</version>
     
-        <name>Mikilin</name>
-        <url>https://github.com/SimonAlong/Mikilin</url>
-        <description>对象属性核查工具</description>
+        <name>lf-execl-easy</name>
+        <description>excel 简易使用</description>
+    
+    
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+            <java.version>1.8</java.version>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+        </properties>
     
         <licenses>
             <license>
@@ -48,69 +53,18 @@
             </license>
         </licenses>
     
-        <developers>
-            <developer>
-                <name>zhouzhenyong</name>
-                <email>simonalongs@126.com</email>
-                <roles>
-                    <role>developer</role>
-                </roles>
-            </developer>
-        </developers>
-    
-        <scm>
-            <connection>scm:git:git@github.com:SimonAlong/Mikilin.git</connection>
-            <developerConnection>scm:git:git@github.com:SimonAlong/Mikilin.git</developerConnection>
-            <url>git@github.com:SimonAlong/Mikilin.git</url>
-        </scm>
-    
-        <properties>
-            <maven.compiler.source>1.8</maven.compiler.source>
-            <maven.compiler.target>1.8</maven.compiler.target>
-        </properties>
-    
-        <dependencies>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.0</version>
-                <optional>true</optional>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>1.2.47</version>
-            </dependency>
-    
-            <!--spock测试框架-->
-            <dependency>
-                <groupId>org.spockframework</groupId>
-                <artifactId>spock-core</artifactId>
-                <version>1.2-groovy-2.4</version>
-                <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>groovy-all</artifactId>
-                        <groupId>org.codehaus.groovy</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-    
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.7.12</version>
-            </dependency>
-            <dependency>
-                <groupId>org.codehaus.groovy</groupId>
-                <artifactId>groovy-all</artifactId>
-                <version>2.4.8</version>
-                <scope>compile</scope>
-            </dependency>
-        </dependencies>
-    
         <build>
+            <!--打包后的名称-->
+            <finalName>${project.artifactId}</finalName>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
                 <!-- Source -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -133,7 +87,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.4</version>
+                    <version>2.1</version>
                     <configuration>
                         <show>private</show>
                         <nohelp>true</nohelp>
@@ -150,12 +104,11 @@
                         </execution>
                     </executions>
                 </plugin>
-    
                 <!-- GPG -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
-                    <version>1.6</version>
+                    <version>1.5</version>
                     <executions>
                         <execution>
                             <id>sign-artifacts</id>
@@ -167,6 +120,7 @@
                     </executions>
                 </plugin>
             </plugins>
+    
         </build>
     
         <distributionManagement>
@@ -180,7 +134,25 @@
             </repository>
         </distributionManagement>
     
+        <!--    需要替换的内容-->
+        <scm>
+            <url>https://github.com/a982338665/lf-execl-easy</url>
+            <connection>https://github.com/a982338665/lf-execl-easy.git</connection>
+            <developerConnection>https://github.com/a982338665/lf-execl-easy</developerConnection>
+        </scm>
+        <developers>
+            <developer>
+                <name>luofeng</name>
+                <email>982338665@qq.com</email>
+                <url>https://github.com/a982338665/lf-execl-easy</url>
+                <roles>
+                    <role>developer</role>
+                </roles>
+            </developer>
+        </developers>
+    
     </project>
+
     
 ### 4.0 GPG环境，用来对上传的文件进行加密和签名，保证你的jar包不被篡改:
     
@@ -222,7 +194,7 @@
                           29851CD296284B502C608DE06A08A45BDF4C5202
                     uid                      a982338665 <982338665@qq.com>
                     sub   rsa2048 2020-06-02 [E] [expires: 2022-06-02]
-                    生成的时候会弹框要求输密码：打包上传的时候需要它，保存好
+                    生成的时候会弹框要求输密码：打包上传的时候需要它，保存好【GPG密码】
                     以上完成后，【6A08A45BDF4C5202】就是申请的key
         ·查看公钥：gpg --list-keys
                     D:\install-soft\Gpg4win\bin>gpg --list-keys
@@ -239,4 +211,23 @@
         ·查询公钥是否发布成功：
             gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 公钥ID
 
-### 5.0
+### 5.0 上传发布：上传一定不要点击idea的deploy按钮，因为deploy和maven-gpg-plugin结合的不是很好，那个gpg插件无法运行，一定要用客户端
+    
+    注意：第一次不能上传SNAPSHOT版本
+    mvn clean deploy --settings /Users/zhouzhenyong/.m2/setting_maven_center.xml
+    若settings已经配置好，则只需执行：
+    mvn clean deploy
+    命令之后会提示输入密码：上一步中的【GPG密码】
+    
+### 6.0 查看上传结果：
+
+    地址：https://oss.sonatype.org/#stagingRepositories
+    登陆：账号是我们注册的用户名和密码
+    点击：左侧的“Staging Respositories（暂存仓库）”，然后在右上角输入groupId，就可以搜索
+    
+    
+    
+    
+    
+    
+
