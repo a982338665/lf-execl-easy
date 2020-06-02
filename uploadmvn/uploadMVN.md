@@ -38,7 +38,7 @@
         <artifactId>lf-execl-easy</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <packaging>jar</packaging>
-    
+        <url>https://github.com/a982338665/lf-execl-easy</url>
         <name>lf-execl-easy</name>
         <description>excel 简易使用</description>
     
