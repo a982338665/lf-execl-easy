@@ -331,5 +331,26 @@ public class ExportExcelUtils {
             }
         }
     }
+    /**
+     * 文件输出
+     * @param outputStream
+     * @param content
+     */
+    public static void outPutResponse(OutputStream outputStream, String content) {
+        try {
+            outputStream.write(content.getBytes());
+            outputStream.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
