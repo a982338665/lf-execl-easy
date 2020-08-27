@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <!--注意限定版本一定为RELEASE,因为上传的对应仓库的存储类型为RELEASE-->
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.1-RELEASE</version>
 
     <name>lf-execl-easy</name>
     <url>https://github.com/a982338665/lf-execl-easy</url>
